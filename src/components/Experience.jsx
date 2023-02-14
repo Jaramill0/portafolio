@@ -26,7 +26,7 @@ function Experience() {
         {
             id: 3,
             src: github,
-            title: 'Github',
+            title: 'GitHub',
             style: 'shadow-gray-400'
         },
         {
