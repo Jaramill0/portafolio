@@ -14,7 +14,7 @@ const Home = () => {
                         Tengo 1 año de experiencia en el desarrollo de sistemas web,
                         Plataformas de escritorio y creación de Bots para distintos aplicativos,
                         Me encuentro abierto a nuevas oportunidades de trabajo
-                        Enfoco mis habilidades al desarrollo web en Front End
+                        enfoco mis habilidades al desarrollo web en Front End
                         Ocupo las tecnologías:
                         React, Angular,  Tailwind, nextjs y Laravel.
                     </p>
