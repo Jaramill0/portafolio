@@ -14,16 +14,16 @@ const Home = () => {
                         Tengo 1 año de experiencia en el desarrollo de sistemas web,
                         Plataformas de escritorio y creación de Bots para distintos aplicativos,
                         Me encuentro abierto a nuevas oportunidades de trabajo
-                        enfoco mis habilidades al desarrollo web en Front End
+                        enfoco mis habilidades al desarrollo Web en Front End
                         Ocupo las tecnologías:
-                        React, Angular,  Tailwind, nextjs y Laravel.
+                        React, Angular,  Tailwind, Nextjs y Laravel.
                     </p>
                     <div>
                         <Link to='portafolio' smooth  duration={600} className='group text-white w-fit px-6 py-3 my-2 flex items-center 
                     rounded-md bg-gradient-to-r from-cyan-400 to-blue-500 cursor-pointer'>
                             Portafolio
                             <span className='group-hover:rotate-90 duration-300'>
-                                <MdKeyboardArrowRight size={25} className="ml-1" />
+                                <MdKeyboardArrowRight size={26} className="ml-1" />
                             </span>
                         </Link>
                     </div>
