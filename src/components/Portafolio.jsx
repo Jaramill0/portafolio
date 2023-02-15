@@ -21,7 +21,7 @@ const Portafolio = () => {
         {
             id: 3,
             src: snake,
-            title:'GameSnake'
+            title:'SnakeGame'
         },
         {
             id: 4,
