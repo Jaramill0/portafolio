@@ -47,7 +47,7 @@ const Portafolio = () => {
                     <p className='text-4xl font-bold inline border-b-4 border-gray-500'>Portafolio</p>
                     <p className='py-6'>Echale un vistazo a algunos de mis trabajos</p>
                 </div>
-                <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-11 sm:px-0'>
+                <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:px-0'>
                     {portafolio.map(({ id, src, title }) => (
                         <div key={id} className='shadow-md shadow-gray-600 rounded-lg'>
                             <img src={src} alt="" className='rounded-md duration-200 hover:scale-105' />
