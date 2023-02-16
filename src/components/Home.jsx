@@ -14,7 +14,7 @@ const Home = () => {
                         Plataformas de escritorio y creación de Bots para distintos aplicativos,
                         Me encuentro abierto a nuevas oportunidades de trabajo
                         enfoco mis habilidades al desarrollo Web en Front End
-                        Ocupo las tecnologías:
+                        ocupo las tecnologías:
                         React, Angular,  Tailwind, Nextjs y Laravel.
                     </p>
                     <div>
@@ -31,9 +31,10 @@ const Home = () => {
                     <img
                         src={image}
                         alt="my profile"
-                        className='rounded-2xl mx-auto md:w-full'
+                        className='rounded-2xl mx-auto md:w-full shadow-md hover:scale-105 duration-500'
                         sizes="(max-width: 300px) 300px, (max-width: 768px) 768px, 1280px" />
                 </div>
+                <br />
             </div>
         </div>
     )
