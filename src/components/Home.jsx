@@ -11,9 +11,9 @@ const Home = () => {
                     <h2 className='text-sm md:text-2xl lg:text-6xl  font-bold text-white'>Desarrollador Web Front End</h2>
                     <p className='text-gray-500 py-4 max-w-md'>
                         Tengo 1 año de experiencia en el desarrollo de sistemas web,
-                        Plataformas de escritorio y creación de Bots para distintos aplicativos,
+                        plataformas de escritorio y creación de Bots para distintos aplicativos,
                         Me encuentro abierto a nuevas oportunidades de trabajo
-                        enfoco mis habilidades al desarrollo Web en Front End
+                        enfoco mis habilidades al desarrollo web en Front End
                         ocupo las tecnologías:
                         React, Angular,  Tailwind, Nextjs y Laravel.
                     </p>
