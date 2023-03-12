@@ -3,70 +3,91 @@ import { FaBars, FaTimes } from 'react-icons/fa'
 import { Link } from 'react-scroll'
 
 const Navbar = () => {
-    const [nav, setNav] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
     const links = [
         {
             id: 1,
-            link: 'home'
+            title: 'Home',
+            target: 'home'
         },
         {
             id: 2,
-            link: 'acerca'
+            title: 'Acerca',
+            target: 'acerca'
         },
         {
             id: 3,
-            link: 'portafolio'
+            title: 'Portafolio',
+            target: 'portafolio'
         },
         {
             id: 4,
-            link: 'experiencia'
+            title: 'Experiencia',
+            target: 'experiencia'
         },
         {
             id: 5,
-            link: 'contacto'
+            title: 'Contacto',
+            target: 'contacto'
         },
-    ]
-    return (
-        <div className="flex justify-between items-center w-full h-20 px-4 text-white bg-black fixed">
-            <div>
-                <h1 className="text-4xl font-signature ml-3">Jaramillo</h1>
-            </div>
-            <ul className="hidden md:flex">
-                {links.map(({ id, link }) => (
-                    <li
-                        key={id}
-                        className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
-                    >
-                        <Link to={link} smooth duration={500}>
-                            {link}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-            <div onClick={() => setNav(!nav)}
-                className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
-            >
-                {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
-            </div>
+    ];
 
-            {nav && (
-                <ul className="flex flex-col justify-center items-center absolute
-                 top-0 left-0 w-full h-screen bg-gradient-to-b
-                  from-black to-gray-800 text-gray-500">
-                    {links.map(({ id, link }) => (
-                        <li
-                            key={id}
-                            className="px-4 cursor-pointer capitalize py-6 text-4xl"
+    return (
+        <nav className="bg-black fixed w-full">
+            <div className="max-w-7xl mx-auto px-4">
+                <div className="flex justify-between items-center h-16">
+                    <h1 className="text-4xl font-signature text-white tracking-wider">Jaramillo</h1>
+                    <div className="flex md:hidden">
+                        <button
+                            onClick={() => setIsOpen(!isOpen)}
+                            type="button"
+                            className="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-gray-200 hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
                         >
-                            <Link onClick={()=> setNav(!nav)} to={link} smooth duration={500}>
-                            {link}
-                        </Link>
-                        </li>
-                    ))}
-                </ul>
+                            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+                        </button>
+                    </div>
+                    <ul className="hidden md:flex md:items-center">
+                        {links.map(({ id, title, target }) => (
+                            <li key={id} className="mx-3">
+                                <Link
+                                    activeClass="text-gray-300"
+                                    to={target}
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                    className="text-gray-400 hover:text-white font-medium tracking-wide uppercase text-sm cursor-pointer"
+                                >
+                                    {title}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            </div>
+            {isOpen && (
+                <div className="md:hidden">
+                    <ul className="pt-2 pb-3 space-y-1">
+                        {links.map(({ id, title, target }) => (
+                            <li key={id}>
+                                <Link
+                                    activeClass="bg-gray-900 text-white"
+                                    to={target}
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                    className="block pl-3 pr-4 py-2 border-l-4 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white cursor-pointer"
+                                >
+                                    {title}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             )}
-        </div>
-    )
+        </nav>
+    );
 }
 
-export default Navbar
+export default Navbar;
