@@ -35,7 +35,7 @@ const Navbar = () => {
     return (
         <nav className="bg-black fixed w-full">
             <div className="max-w-7xl mx-auto px-4">
-                <div className="flex justify-between items-center h-16">
+                <div className="flex justify-between items-center h-16 z-50">
                     <h1 className="text-4xl font-signature text-white tracking-wider">Jaramillo</h1>
                     <div className="flex md:hidden">
                         <button
