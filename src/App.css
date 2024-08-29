@@ -1,20 +1,25 @@
+/* Estilos generales de la aplicación */
 .App {
   text-align: center;
+  font-family: "Arial", sans-serif; /* Asegúrate de tener una fuente legible */
 }
 
+/* Estilos del logo de la aplicación */
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
 
+/* Animación del logo */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
 
+/* Estilos para el encabezado de la aplicación */
 .App-header {
-  background-color: #282c34;
+  background-color: #282c34; /* Color de fondo para modo claro */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,10 +29,56 @@
   color: white;
 }
 
+/* Estilos para enlaces */
 .App-link {
   color: #61dafb;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
+/* Estilos para enlaces en modo oscuro */
+.dark .App-link {
+  color: #4fc3f7; /* Color del enlace en modo oscuro */
+}
+
+/* Estilos adicionales para el modo oscuro */
+.dark .App-header {
+  background-color: #121212; /* Color de fondo para modo oscuro */
+}
+
+.dark .navbar {
+  background-color: #333;
+  color: white;
+}
+
+.dark .navbar a {
+  color: white; /* Color del texto en la barra de navegación en modo oscuro */
+}
+
+/* Estilos para el portafolio */
+.dark .portafolio-item {
+  background-color: #1f1f1f; /* Fondo de los elementos del portafolio en modo oscuro */
+  color: white;
+}
+
+.dark .portafolio-item img {
+  filter: brightness(
+    0.8
+  ); /* Ajuste del brillo de las imágenes en modo oscuro */
+}
+
+/* Estilos para botones en modo oscuro */
+.dark .btn-demo,
+.dark .btn-code {
+  background: linear-gradient(
+    to right,
+    #1e3a8a,
+    #3b82f6
+  ); /* Gradiente para botones en modo oscuro */
+  color: white;
+}
+
+/* Animación del logo */
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
